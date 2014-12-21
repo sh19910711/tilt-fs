@@ -2,6 +2,7 @@ module Tilt::Fs::FileSystem
 
   require "tilt"
   require "yaml"
+  require "pathname"
 
   require "tilt/fs/file_system/core"
   require "tilt/fs/file_system/dir"
