@@ -29,12 +29,12 @@ $ cat mnt/hello.txt
 Hello, <%= name %>
 $
 $ mv _template/hello.txt _template/hello.txt.erb
-$ ruby -r yaml -e "puts({name: "world"}.to_yaml)" > .data.yaml
+$ ruby -r yaml -e 'puts({name: "world"}.to_yaml)' > .data.yaml
     - you can pass the data through ".data.yaml"
 $ cat mnt/hello.txt
 Hello, world
 $
-$ ruby -r yaml -e "puts({name: "NEW WORLD"}.to_yaml)" > .data.yaml
+$ ruby -r yaml -e 'puts({name: "NEW WORLD"}.to_yaml)' > .data.yaml
 $ cat mnt/hello.txt
 Hello, NEW WORLD
 ```
