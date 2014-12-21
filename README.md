@@ -10,22 +10,26 @@ The user space file system based on [Tilt](https://github.com/rtomayko/tilt).
 
 ### 1. Run the filesystem
 
-    $ cd {some_dir}
-    $ mkdir _template
-    $ mkdir mnt
-    $ echo 'Hello, <%= name %>' > _template/hello.txt.erb
-    $ tiltfs mnt/ _template/
-    -> Mount "_template" into "mnt"
+```bash
+$ cd {some_dir}
+$ mkdir _template
+$ mkdir mnt
+$ echo 'Hello, <%= name %>' > _template/hello.txt.erb
+$ tiltfs mnt/ _template/
+-> Mount "_template" into "mnt"
+```
 
 ### 2. Access to the files
 
-    $ cd {some_dir}
-    $ ruby -r yaml -e "puts({name: "world"}.to_yaml)" > .data.yaml
-    $ cat mnt/hello.txt
-    Hello, world
-    $ ruby -r yaml -e "puts({name: "NEW WORLD"}.to_yaml)" > .data.yaml
-    $ cat mnt/hello.txt
-    Hello, NEW WORLD
+```bash
+$ cd {some_dir}
+$ ruby -r yaml -e "puts({name: "world"}.to_yaml)" > .data.yaml
+$ cat mnt/hello.txt
+Hello, world
+$ ruby -r yaml -e "puts({name: "NEW WORLD"}.to_yaml)" > .data.yaml
+$ cat mnt/hello.txt
+Hello, NEW WORLD
+```
 
 ## Contributing
 
