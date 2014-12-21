@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require "rfuse"
+require "tilt/fs"
+
+args = ARGV.clone
+src_path = args.pop
+
+RFuse.main(args) do
+  mount_point = ARGV.first
+  fs = Tilt::Fs::FileSystem::Core.new(mount_point, src_path)
+end
