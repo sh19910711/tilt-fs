@@ -8,13 +8,13 @@ The user space file system based on [Tilt](https://github.com/rtomayko/tilt).
 
 ## Usage
 
-### 1. Run the filesystem
+### 1. Mount the filesystem
 
 ```bash
 $ cd {some_dir}
 $ mkdir _template
 $ mkdir mnt
-$ echo 'Hello, <%= name %>' > _template/hello.txt.erb
+$ echo 'Hello, <%= name %>' > _template/hello.txt
 $ tiltfs mnt/ _template/
 -> Mount "_template" into "mnt"
 ```
@@ -23,12 +23,24 @@ $ tiltfs mnt/ _template/
 
 ```bash
 $ cd {some_dir}
+$ cat mnt/hello.txt
+Hello, <%= name %>
+$
+$ mv _template/hello.txt _template/hello.txt.erb
 $ ruby -r yaml -e "puts({name: "world"}.to_yaml)" > .data.yaml
 $ cat mnt/hello.txt
 Hello, world
+$
 $ ruby -r yaml -e "puts({name: "NEW WORLD"}.to_yaml)" > .data.yaml
 $ cat mnt/hello.txt
 Hello, NEW WORLD
+```
+
+### 3. Unmount the filesystem
+
+```bash
+$ cd {some_dir}
+$ fusermount -u mnt/
 ```
 
 ## Contributing
