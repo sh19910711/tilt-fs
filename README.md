@@ -1,4 +1,4 @@
-# TiltFS
+# Tilt::FS
 
 [![Build Status](https://travis-ci.org/sh19910711/ruby-tilt-fs.svg?branch=master)](https://travis-ci.org/sh19910711/ruby-tilt-fs)
 
@@ -30,6 +30,7 @@ Hello, <%= name %>
 $
 $ mv _template/hello.txt _template/hello.txt.erb
 $ ruby -r yaml -e "puts({name: "world"}.to_yaml)" > .data.yaml
+    - you can pass the data through ".data.yaml"
 $ cat mnt/hello.txt
 Hello, world
 $
