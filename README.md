@@ -1,4 +1,4 @@
-# Tilt::FS
+# TiltFs
 
 [![Build Status](https://travis-ci.org/sh19910711/ruby-tilt-fs.svg?branch=master)](https://travis-ci.org/sh19910711/ruby-tilt-fs)
 
