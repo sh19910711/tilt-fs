@@ -3,7 +3,6 @@ language: ruby
 rvm:
   - "2.1"
   - "2.0"
-  - "1.9"
 
 bundler_args: "--jobs 4"
 
