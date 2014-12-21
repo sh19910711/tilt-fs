@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version = Tilt::Fs::VERSION
   spec.authors = ["Hiroyuki Sano"]
   spec.email = ["sh19910711@gmail.com"]
-  spec.summary = %q{Tilt based FUSE file system}
-  spec.description = %q{Tilt based FUSE file system}
-  spec.homepage = ""
+  spec.summary = %q{The user space file system based on Tilt.}
+  spec.description = %q{The user space file system based on Tilt.}
+  spec.homepage = "https://github.com/sh19910711/ruby-tilt-fs"
   spec.license = "MIT"
 
   spec.files = `git ls-files -z`.split("\x0")
@@ -21,7 +21,9 @@ Gem::Specification.new do |spec|
   spec.add_dependency "tilt", "~> 2.0"
   spec.add_dependency "rfuse", "~> 1.1.0.RC0"
 
-  spec.add_development_dependency "bundler", "~> 1.7"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "test-unit"
+  spec.add_development_dependency "bundler", "~> 1.7.0"
+  spec.add_development_dependency "rake", "~> 10.4.0"
+  spec.add_development_dependency "test-unit", "~> 3.0.0"
+  spec.add_development_dependency "fakefs", "~> 0.6.0"
+  spec.add_development_dependency "pry-byebug", "~> 2.0.0"
 end
