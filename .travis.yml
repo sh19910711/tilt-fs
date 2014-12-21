@@ -15,3 +15,11 @@ script:
 
 cache:
   bundler: true
+
+deploy:
+  provider: rubygems
+  api_key:
+    master:
+      secure: "amo7UuG6aN84wNKyUw1FjXjzVsB9tLNa4k81TAhGsRqOuPl7GvFhfgfN+yUIdRnaJqz+me8DXj2jwMV5PH7b2ZlEAX+jhobdI2BrAHf/ZWTHrEamLkBlbHKfo9y5R5MaeChfiMxONFqeli1ulHmR/Buz/gtBLYlyLoJ6VeScI7k="
+  gem:
+    master: "tilt-fs"
