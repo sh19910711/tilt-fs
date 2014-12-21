@@ -1,5 +1,7 @@
 # TiltFS
 
+[![Build Status](https://travis-ci.org/sh19910711/ruby-tilt-fs.svg?branch=master)](https://travis-ci.org/sh19910711/ruby-tilt-fs)
+
 The user space file system based on [Tilt](https://github.com/rtomayko/tilt).
 
 ## Installation
