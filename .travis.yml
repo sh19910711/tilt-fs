@@ -7,7 +7,9 @@ rvm:
 
 bundler_args: "--jobs 4"
 
-sudo: false
+before_install:
+  - sudo apt-get update -y
+  - sudo apt-get install -y libfuse-dev
 
 script:
   - bundle exec rake test
