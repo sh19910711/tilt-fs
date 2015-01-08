@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version = Tilt::Fs::VERSION
   spec.authors = ["Hiroyuki Sano"]
   spec.email = ["sh19910711@gmail.com"]
-  spec.summary = %q{The user space file system based on Tilt.}
-  spec.description = %q{The user space file system based on Tilt.}
+  spec.summary = %q{The userspace file system based on Tilt.}
+  spec.description = %q{The userspace file system based on Tilt.}
   spec.homepage = "https://github.com/sh19910711/ruby-tilt-fs"
   spec.license = "MIT"
 
